@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+body {
+    justify-content: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    /* border-radius: 5px; */
+}
+
+.form-control {
+    background-color: white;
+    border: 1px solid rgb(215, 209, 209); 
+    /* color: rgb(0, 0, 0);  */
+    padding-left: 10px;
+    padding-right: 40px;
+    outline: none;
+    margin-left: -6px;
+    border-radius: 4px;
+}
+
+#search-form {
+    width: 16%;
+}
+
+.form-control::placeholder {
+    color: rgb(0, 0, 0); /* White placeholder text */
+}
+
+.position-relative {
+    position: relative;
+    width: 100%;
+}
+
+.search-icon {
+    width: 30px; /* Icon size */
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.search-button img {
+    pointer-events: none;
+}
+
+.form-control:focus {
+    box-shadow: none; /* Remove focus outline */
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-style: bold;
+    /* border: 2px solid rgb(255, 255, 255); */
+}
+
+.navbar {
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0.5rem;
+    font-weight: 500;
+    font-size: 20px;
+    --bs-navbar-color: rgb(0, 0, 0);
+    --bs-navbar-hover-color: #000000;
+    --bs-navbar-active-color: #000000;
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-color: rgb(0, 0, 0);
+    --bs-navbar-brand-hover-color: rgb(0, 0, 0);
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
+    --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 1.25rem;
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+    --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+}
+
+.container-md {
+    margin-top: 40px;
+    /* Spacing for better layout */
+}
+
+h3 {
+    color: #457B9D;
+    /* Title color */
+    margin-bottom: 20px;
+    /* Spacing below headings */
+}
+
+.lap-row {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-wrap: wrap;
+    /* Allow wrapping to next line if needed */
+    gap: 15px;
+    /* Space between cards */
+}
+
+.lap-card {
+    flex: 1 1 calc(14.2857% - 15px);
+    /* 7 cards per row with margin */
+    min-width: 180px;
+    /* Minimum width of cards */
+    border: 1px solid #A8DADC;
+    /* Light border for cards */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.card-header {
+    background-color: #F1FAEE;
+    /* Light background for headers */
+    font-weight: bold;
+    color: #1D3557;
+    /* Dark color for header text */
+}
+
+.card-body p {
+    margin: 0;
+    color: #555;
+    /* Slightly lighter gray for body text */
+}
+
+#search-form {
+    margin-left: auto;
+    /* Align search form to the right */
+}
+
+#race-analysis,
+#pit-analysis {
+    margin-bottom: 40px;
+    /* Space between sections */
+}
+
+/* Loading message styling */
+.loading {
+    text-align: center;
+    /* Center the loading message */
+    color: #457B9D;
+    /* Loading message color */
+    font-weight: bold;
+}

@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.navbar {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    /* border-radius: 5px; */
+}
+
+.form-control {
+    background-color: white;
+    border: 1px solid rgb(215, 209, 209); 
+    /* color: rgb(0, 0, 0);  */
+    padding-left: 10px;
+    padding-right: 40px;
+    outline: none;
+    margin-left: -6px;
+    border-radius: 4px;
+}
+
+.form-control::placeholder {
+    color: rgb(0, 0, 0); /* White placeholder text */
+}
+
+.position-relative {
+    position: relative;
+    width: 100%;
+}
+
+.search-icon {
+    width: 30px; /* Icon size */
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.search-button img {
+    pointer-events: none;
+}
+
+.form-control:focus {
+    box-shadow: none; /* Remove focus outline */
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-style: bold;
+    /* border: 2px solid rgb(255, 255, 255); */
+}
+
+.navbar {
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0.5rem;
+    font-weight: 500;
+    font-size: 20px;
+    --bs-navbar-color: rgb(0, 0, 0);
+    --bs-navbar-hover-color: #000000;
+    --bs-navbar-active-color: #000000;
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-color: rgb(0, 0, 0);
+    --bs-navbar-brand-hover-color: rgb(0, 0, 0);
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
+    --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 1.25rem;
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+    --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+}
+
+/* .btn-danger {
+    height: 30%;
+} */
+
+.bg-body-tertiary {
+    background-color: transparent !important;
+}
+
+body {
+    background-color: white;
+    /* background-image: url(https://images.unsplash.com/photo-1720423755262-61786842f2b8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+}
+
+.container-fluid {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 61px;
+    font-weight: 500;
+    background-color: white;
+    position: absolute;
+    top: 0;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.card {
+    width: 90%;
+    height: 400px;
+    justify-content: center;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+    width: 90%;
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.row {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+.drivers-img {
+    width: 50%;
+    height: auto;
+}
+
+.container-sm {
+    margin: 135px 0 55px 75px;
+}
+
+.container-sm h1 {
+    font-size: 75px;
+    border-bottom: 1px solid rgb(215, 209, 209);
+    font-style: italic;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 100px 50px 0px 30px;
+}
+
+footer h1 {
+    font-family: 'Messina', sans-serif;
+    font-size: 78px;
+    font-weight: bold;
+    align-items: flex-end;
+}
+
+.footer-head {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.footer-head b {
+    padding-top: 6px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 15px;
+    color: rgb(85, 85, 85);
+}

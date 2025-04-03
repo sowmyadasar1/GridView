@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid View - Driver Profiles</title>
+  <link href="https://fonts.cdnfonts.com/css/messina" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="driver-style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"
+        style="font-family: 'Messina', sans-serif; font-size: 22px;">GridView</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="driver-profile.html">Driver Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="teams.html">Teams</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Race Analysis
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="lap-pit.html">Laps & Pit</a></li>
+              <li><a class="dropdown-item" href="sessions.html">Sessions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact-us.html">Contact Us</a>
+          </li>
+        </ul>
+        <!-- <form class="d-flex" role="search">
+          <div class="position-relative">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button type="submit" class="search-button">
+              <img src="https://img.icons8.com/?size=100&id=TQPOC8XaUqZ0&format=png&color=000000" alt="Search Icon"
+                class="search-icon">
+            </button>
+          </div>
+        </form> -->
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-sm">
+    <h1>Meet the Drivers</h1>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4" id="driver-cards-container">
+  </div>
+
+  <script>
+    async function fetchDrivers() {
+      try {
+        const response = await fetch('https://api.openf1.org/v1/drivers');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await response.json();
+      } catch (error) {
+        console.error('Error fetching driver data:', error);
+        return [];
+      }
+    }
+
+    function createDriverCard(driver) {
+      return `
+      <div class="col">
+          <div class="card" style="border: 4px solid ${driver.team_colour};">
+            <div class="card-body">
+              <img class="drivers-img" src="https://media.formula1.com/image/upload/f_auto,c_limit,q_75,w_1320/content/dam/fom-website/drivers/2024Drivers/${driver.last_name}.png" class="card-img-top" alt="${driver.full_name}">
+              <div class="card-body-text">
+                  <h5 class="card-title">${driver.full_name}</h5>
+                  <p class="card-text">
+                      <hr> Team: ${driver.team_name}
+                      <hr> Country: ${driver.country_code}
+                      <hr> Car Number: ${driver.driver_number}
+                  </p>
+                </div>
+              </div>
+          </div>
+      </div>
+    `;
+    }
+
+    async function displayDrivers() {
+      const driverCardsContainer = document.getElementById('driver-cards-container');
+      const drivers = await fetchDrivers();
+
+      if (drivers.length === 0) {
+        driverCardsContainer.innerHTML = '<p>No driver data available.</p>';
+        return;
+      }
+
+      // Define an array of driver names to exclude
+      const excludedDrivers = [21, 34, 5, 6, 7, 8, 9, 12, 15, 17, 19, 25, 26, 28, 29, 30, 39, 41, 42, 61, 98, 36, 37, 45, 97];
+
+      // Filter out excluded drivers and ensure only Oliver Bearman is included if multiple Olivers exist
+      const filteredDrivers = drivers.filter(driver => {
+        if (excludedDrivers.includes(driver.driver_number)) {
+          return false;
+        }
+        return true;
+      });
+
+      // Create a Set to track unique driver numbers to prevent duplicates
+      const uniqueDriverNumbers = new Set();
+      const uniqueDrivers = filteredDrivers.filter(driver => {
+        if (uniqueDriverNumbers.has(driver.driver_number)) {
+          return false;
+        }
+        uniqueDriverNumbers.add(driver.driver_number);
+        return true;
+      });
+
+      // Create driver cards and insert them into the container
+      const driverCards = uniqueDrivers.map(createDriverCard).join('');
+      driverCardsContainer.innerHTML = driverCards;
+    }
+
+    displayDrivers();
+  </script>
+  <footer>
+    <div class="footer-head">
+      <h1>GridView</h1>
+      <b>Adrenaline. <br>Speed. <br>Triumph.</b>
+    </div>
+    <div class="footer-links">
+      <p>Privacy statement</p>
+      <p>General terms and conditions</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

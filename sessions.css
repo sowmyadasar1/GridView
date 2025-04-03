@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.navbar {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    /* border-radius: 5px; */
+}
+
+.form-control {
+    background-color: white;
+    border: 1px solid rgb(215, 209, 209); 
+    /* color: rgb(0, 0, 0);  */
+    padding-left: 10px;
+    padding-right: 40px;
+    outline: none;
+    margin-left: -6px;
+    border-radius: 4px;
+}
+
+.form-control::placeholder {
+    color: rgb(0, 0, 0); /* White placeholder text */
+}
+
+.position-relative {
+    position: relative;
+    width: 100%;
+}
+
+.search-icon {
+    width: 30px; /* Icon size */
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.search-button img {
+    pointer-events: none;
+}
+
+.form-control:focus {
+    box-shadow: none; /* Remove focus outline */
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-style: bold;
+    /* border: 2px solid rgb(255, 255, 255); */
+}
+
+.navbar {
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0.5rem;
+    font-weight: 500;
+    font-size: 20px;
+    --bs-navbar-color: rgb(0, 0, 0);
+    --bs-navbar-hover-color: #000000;
+    --bs-navbar-active-color: #000000;
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-color: rgb(0, 0, 0);
+    --bs-navbar-brand-hover-color: rgb(0, 0, 0);
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
+    --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 1.25rem;
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+    --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+}
+
+.container-md {
+    position: relative;
+    top: 50px;
+}
+
+.location-section {
+    margin-bottom: 2rem;
+}
+
+.location-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem; /* Larger font size for location heading */
+    font-weight: bold; /* Bold text for location heading */
+    color: #000; /* Black for location heading */
+}
+
+.session-card {
+    background-color: #fff; /* White card background */
+    color: #000; /* Black text inside cards */
+    margin: 0.5rem;
+    flex: 1 1 calc(33.333% - 1rem); /* Three cards in a row with some margin */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s; /* Smooth hover effect */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.session-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.session-detail {
+    margin: 0.5rem 0;
+}
+
+.session-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next line */
+}

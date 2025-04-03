@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grid View</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/noto-sans-devanagari" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/messina" rel="stylesheet">
+    <link rel="stylesheet" href="index-style.css">
+    <style>
+        /* Ensure the video container takes full width and auto height */
+        .video-container {
+            width: 100%;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        /* Make iframe match the width of the container and maintain aspect ratio */
+        .video-container iframe {
+            width: 100%;
+            height: 100vh; /* Match the viewport height */
+            border: none;
+        }
+    
+        /* Position text over the video */
+        .video-text {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+    
+        .video-text h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+    
+        .video-text p {
+            font-size: 1.5rem;
+        }
+    
+        /* Optional: Style the icon link */
+        .icon-link img {
+            width: 50px;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"
+                style="font-family: 'Messina', sans-serif; font-size: 22px;">GridView</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="driver-profile.html">Driver Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teams.html">Teams</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Race Analysis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lap-pit.html">Laps & Pit</a></li>
+                            <li><a class="dropdown-item" href="sessions.html">Sessions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Cotact Us</a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                    <div class="position-relative">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button type="submit" class="search-button">
+                            <img src="https://img.icons8.com/?size=100&id=TQPOC8XaUqZ0&format=png&color=FFFFFF"
+                                alt="Search Icon" class="search-icon">
+                        </button>
+                    </div>
+                </form> -->
+                <!-- <div class="acct-sign">
+                    <button type="button" class="btn btn-outline-danger">Sign up</button>
+                    <button type="button" class="btn btn-outline-danger">Log in</button>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+    <div class="video-container">
+        <iframe 
+            src="https://player.vimeo.com/video/1072161892?autoplay=1&loop=1&muted=1&background=1" 
+            frameborder="0" 
+            allow="autoplay; fullscreen" 
+            allowfullscreen>
+        </iframe>
+        <div class="video-text">
+            <h1>Where data meets the <i>drive.</i></h1>
+            <p>⍟ Overview</p>
+            <a href="your-link.html" class="icon-link">
+                <img src="https://img.icons8.com/?size=100&id=7800&format=png&color=FFFFFF" alt="Icon">
+            </a>
+        </div>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <!-- <video autoplay muted loop class="background-video">
+            <source src="https://drive.google.com/uc?export=download&id=1g69CR0-4Hd_SpfYmVo8xpoLCsW359bvX" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> -->
+    <!--    <div class="video-text">
+            <h1>Where data meets the <i>drive.</i> </h1>
+            <p>⍟ Overview</p>
+            <a href="your-link.html" class="icon-link">
+                <img src="https://img.icons8.com/?size=100&id=7800&format=png&color=FFFFFF" alt="Icon"
+                    class="bouncing-icon">
+            </a>
+        </div> -->
+    </div>
+    <div class="container-sm">
+        <h1>
+            Behind the helmets and engines
+        </h1>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card">
+                <img src="https://wallpapercave.com/wp/wp9001463.jpg" class="card-img-top" alt="merc">
+                <div class="card-body">
+                    <h5 class="card-title">Speed Meets Precision</h5>
+                    <p class="card-text">Experience the thrill of raw speed as Nico Rosberg pushes the limits, leaving
+                        sparks and the competition behind. This is the essence of Formula 1 engineering at its peak.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://wallpaperaccess.com/full/9393896.jpg" class="card-img-top" alt="redbull">
+                <div class="card-body">
+                    <h5 class="card-title">Celebration in Full Throttle</h5>
+                    <p class="card-text">Red Bull’s dominance captured in a moment of pure exhilaration. Smoke, speed,
+                        and style—when the champion celebrates, the track becomes a canvas. The
+                        screech of tires, the smoke swirling into the sky, and the blinding speed blur the line between
+                        precision and pure joy.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://wallpapercave.com/wp/wp13812294.jpg" class="card-img-top" alt="ferrari">
+                <div class="card-body">
+                    <h5 class="card-title">Power in Every Turn</h5>
+                    <p class="card-text">The close-up of Ferrari’s wheel captures the strength and finesse needed to
+                        dominate the circuit. From grip to precision, every detail defines performance on the edge.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://wallpaperaccess.com/full/8385556.jpg" class="card-img-top" alt="wet race">
+                <div class="card-body">
+                    <h5 class="card-title">Battling the Elements</h5>
+                    <p class="card-text">When the skies open up, the true spirit of racing emerges. In these treacherous
+                        conditions, it’s not just about speed—it’s about control, timing, and sheer courage. As water
+                        sprays from the tires, visibility drops, and the margin for error narrows, every driver faces
+                        the ultimate test of skill. This is racing in its rawest form—where champions are truly made.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-md">
+        <h1>Creator's <i>Pit-Stop</i>.</h1>
+        <p>Hi, and welcome! If you’re here, you’ve probably picked up on the fact that I’m a bit of an F1 fanatic. And
+            when I say “bit,” I mean that my love for this sport runs deep. There’s just something about the mix of
+            speed, strategy, and pure adrenaline that has me hooked—and I figured, why not channel all that passion into
+            something more than just watching races?
+            <br><br>
+            This website is my tribute to the world of Formula 1, created by a fan who just couldn’t get enough. Here,
+            you’ll find everything from detailed race breakdowns to behind-the-scenes insights and more. But it’s not
+            just about the stats or the results; it’s about the moments that make F1 so captivating—the high-speed
+            battles, the split-second decisions, and the electric energy that grips you every time the lights go out.
+            <br><br>
+            I wanted to build a space that’s as exciting and dynamic as the sport itself. Each page is crafted with
+            care, designed to be both insightful and visually engaging. Whether you’re a seasoned F1 enthusiast or just
+            beginning to explore what makes this sport so special, I hope you’ll find something here that resonates with
+            you.
+            <br><br>
+            So, take a look around, dive into the world of Formula 1 as seen through the eyes of someone who truly loves
+            every twist and turn, and let’s celebrate the thrill of the fastest show on Earth together. Welcome, and
+            enjoy the ride!
+        </p>
+    </div>
+    <footer>
+        <div class="footer-head">
+            <h1>GridView</h1>
+            <b>Adrenaline. <br>Speed. <br>Triumph.</b>
+        </div>
+        <div class="footer-links">
+            <p>Privacy statement</p>
+            <p>General terms and conditions</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

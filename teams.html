@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grid View</title>
+    <link rel="stylesheet" href="teams-style.css">
+    <link href="https://fonts.cdnfonts.com/css/messina" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"
+                style="font-family: 'Messina', sans-serif; font-size: 22px;">GridView</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="driver-profile.html">Driver Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teams.html">Teams</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Race Analysis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lap-pit.html">Laps & Pit</a></li>
+                            <li><a class="dropdown-item" href="sessions.html">Sessions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Cotact Us</a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                    <div class="position-relative">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button type="submit" class="search-button">
+                            <img src="https://img.icons8.com/?size=100&id=TQPOC8XaUqZ0&format=png&color=000000"
+                                alt="Search Icon" class="search-icon">
+                        </button>
+                    </div>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    <div class="container-sm">
+        <h1>The Teams' Grid</h1>
+    </div>
+    <div class="hero">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="card-inner-title">
+                    <h5 class="card-title-rbr">Red Bull Racing</h5>
+                    <img src="https://media.formula1.com/content/dam/fom-website/teams/2024/red-bull-racing-logo.png">
+                </div>
+                <hr>
+                <div class="card-text">
+                    <p>Max <b>Verstappen</b></p>
+                    <p>Sergio <b>Perez</b></p>
+                </div>
+                <div class="card-img-top">
+                    <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/red-bull-racing.png"
+                        class="team-img" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="card-inner-title">
+                    <h5 class="card-title-mcl">McLaren</h5>
+                    <img src="https://media.formula1.com/content/dam/fom-website/teams/2024/mclaren-logo.png">
+                </div>
+                <hr>
+                <div class="card-text">
+                    <p>Lando <b>Norris</b></p>
+                    <p>Oscar <b>Piastri</b></p>
+                </div>
+                <div class="card-img-top">
+                    <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/mclaren.png"
+                        class="team-img" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="card-inner-title">
+                    <h5 class="card-title-fer">Ferrari</h5>
+                    <img src="https://media.formula1.com/content/dam/fom-website/teams/2024/ferrari-logo.png">
+                </div>
+                <hr>
+                <div class="card-text">
+                    <p>Charles <b>Leclerc</b></p>
+                    <p>Carlos <b>Sainz</b></p>
+                </div>
+                <div class="card-img-top">
+                    <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/ferrari.png"
+                        class="team-img" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="card-inner-title">
+                    <h5 class="card-title-mer">Mercedes</h5>
+                    <img src="https://media.formula1.com/content/dam/fom-website/teams/2024/mercedes-logo.png">
+                </div>
+                <hr>
+                <div class="card-text">
+                    <p>Lewis <b>Hamilton</b></p>
+                    <p>George <b>Russell</b></p>
+                </div>
+                <div class="card-img-top">
+                    <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/mercedes.png"
+                        class="team-img" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="card-inner-title">
+                    <h5 class="card-title-am">Aston Martin</h5>
+                    <img src="https://media.formula1.com/content/dam/fom-website/teams/2024/aston-martin-logo.png">
+                </div>
+                <hr>
+                <div class="card-text">
+                    <p>Fernando <b>Alonso</b></p>
+                    <p>Lance <b>Stroll</b></p>
+                </div>
+                <div class="card-img-top">
+                    <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/aston-martin.png"
+                        class="team-img" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="card-inner-title">
+                    <h5 class="card-title-rb">RB</h5>
+                    <img src="https://media.formula1.com/content/dam/fom-website/teams/2024/rb-logo.png">
+                </div>
+                <hr>
+                <div class="card-text">
+                    <p>Yuki <b>Tsunoda</b></p>
+                    <p>Daniel <b>Ricciardo</b></p>
+                </div>
+                <div class="card-img-top">
+                    <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/rb.png"
+                        class="team-img" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="card-inner-title">
+                    <h5 class="card-title-haas">Haas</h5>
+                    <img src="https://media.formula1.com/content/dam/fom-website/teams/2024/haas-logo.png">
+                </div>
+                <hr>
+                <div class="card-text">
+                    <p>Nico <b>Hukenberg</b></p>
+                    <p>Kevin <b>Magnussen</b></p>
+                </div>
+                <div class="card-img-top">
+                    <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/haas.png"
+                        class="team-img" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="card-inner-title">
+                    <h5 class="card-title-alp">Alpine</h5>
+                    <img src="https://media.formula1.com/content/dam/fom-website/teams/2024/alpine-logo.png">
+                </div>
+                <hr>
+                <div class="card-text">
+                    <p>Pierre <b>Gasly</b></p>
+                    <p>Esteban <b>Ocon</b></p>
+                </div>
+                <div class="card-img-top">
+                    <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/alpine.png"
+                        class="team-img" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="card-inner-title">
+                    <h5 class="card-title-wil">Williams</h5>
+                    <img src="https://media.formula1.com/content/dam/fom-website/teams/2024/williams-logo.png">
+                </div>
+                <hr>
+                <div class="card-text">
+                    <p>Alex <b>Albon</b></p>
+                    <p>Franco <b>Colapinto</b></p>
+                </div>
+                <div class="card-img-top">
+                    <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/williams.png"
+                        class="team-img" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="card-inner-title">
+                    <h5 class="card-title-ks">Kick Sauber</h5>
+                    <img src="https://media.formula1.com/content/dam/fom-website/teams/2024/kick-sauber-logo.png">
+                </div>
+                <hr>
+                <div class="card-text">
+                    <p>Valtteri <b>Bottas</b></p>
+                    <p><b>Zhou</b> Guanyu</p>
+                </div>
+                <div class="card-img-top">
+                    <img src="https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/kick-sauber.png"
+                        class="team-img" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-head">
+            <h1>GridView</h1>
+            <b>Adrenaline. <br>Speed. <br>Triumph.</b>
+        </div>
+        <div class="footer-links">
+            <p>Privacy statement</p>
+            <p>General terms and conditions</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/messina" rel="stylesheet">
+    <link rel="stylesheet" href="index-style.css">
+    <style>
+        body {
+            font-family: 'Messina', sans-serif;
+            color: #000;
+        }
+
+        .background-video {
+            filter: blur(6px);
+        }
+
+        .contact-section {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-top: -30px;
+            z-index: 2;
+            position: relative;
+            max-width: 900px;
+            margin: 50px auto;
+        }
+
+        .contact-details,
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            border: 1px solid #c4bfbf;
+            margin: 5px;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: transparent;
+        }
+
+        .contact-form button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #333;
+        }
+
+        .contact-heading {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"
+                style="font-family: 'Messina', sans-serif; font-size: 22px;">GridView</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="driver-profile.html">Driver Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teams.html">Teams</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Race Analysis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lap-pit.html">Laps & Pit</a></li>
+                            <li><a class="dropdown-item" href="sessions.html">Sessions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="video-container">
+        <video autoplay muted loop class="background-video">
+            <source src="f1-edit - Made with Clipchamp.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-text">
+            <h1>Get In <i>Touch.</i> </h1>
+            <p>⍟ We would love to hear from you</p>
+        </div>
+    </div>
+
+    <div class="container contact-section">
+        <h2 class="contact-heading">Contact Us</h2>
+        <p class="contact-description">
+            We’re here to help and answer any question you might have. Reach out to us with inquiries about our
+            services,
+            technical support, or partnerships. Our team is available to respond to your questions and provide
+            assistance.
+            We strive to respond within 24 hours, ensuring you get the help you need when you need it.
+        </p>
+
+        <div class="row">
+            <div class="col-md-6 contact-details">
+                <!-- <h4>Get in Touch</h4> -->
+                <p><strong>Email:</strong> contact@yourcompany.com</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Address:</strong> 123 Main St, Anytown, AN 12345</p>
+            </div>
+
+            <!-- <div class="col-md-6 contact-form">
+                <form action="#" method="post">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div> -->
+        </div>
+
+        <div class="contact-description">
+            <p>
+                Looking for immediate assistance? Check out our <a href="#">FAQ section</a> for quick answers to common
+                questions.
+                For further details about our services or business partnerships, feel free to reach out directly through
+                this form.
+            </p>
+            <p>
+                Our dedicated support team is here to provide a seamless experience, whether you're a new client or a
+                long-time
+                partner. We appreciate your interest and look forward to connecting with you.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-head">
+            <h1>GridView</h1>
+            <b>Adrenaline. <br>Speed. <br>Triumph.</b>
+        </div>
+        <div class="footer-links">
+            <p>Privacy statement</p>
+            <p>General terms and conditions</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-o4dMT/m8yvwZ/+gRGxBxOQfH1om/oj0q5YFfq5ffU8T8A2CVfDCKFus6EAmvMxRI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
